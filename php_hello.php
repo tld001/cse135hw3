@@ -7,7 +7,17 @@
   <link rel="stylesheet" type="text/css" href=style.css>
 </head>
 
-<body>
+<body onload = "return random_color()">
+  <div id = "program">
+  </div>
+  <script type = "text/javascript">
+      function random_color()
+      {
+          var color = '#';
+          var hex_code = ['E0162B','FFFFFF','0052A5'];
+          color += hex_code[Math.floor(Math.random() * hex_code.length)];
+          document.getElementById('program').style.background = color;
+      }
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
