@@ -28,7 +28,7 @@
   <section>
         <br>
         <?php 
-          date_default_timezone_set('America/San_Diego');
+          date_default_timezone_set('America/Los_Angeles');
           
         ?>
         <br>
