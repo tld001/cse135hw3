@@ -12,7 +12,7 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="README.html">README</a></li>
-        <li><a href="php_hello.html">PHP Hello</a></li>
+        <li><a href="php_hello.php">PHP Hello</a></li>
         <li><a href="cgi_hello.html">CGI Hello</a></li>
         <li><a href="php_environment.html">PHP Environment</a></li>
         <li><a href="cgi_environment.html">CGI Environment</a></li>
@@ -26,6 +26,7 @@
   <nav>
   <section>
         <?php 
+          date_default_timezone_set('America/Los_Angeles');
           print "Hello Web World From Language PHP on ";
           print date("m/d/Y h:i a");
         ?>
