@@ -1,11 +1,13 @@
+
+<!doctype html>
+
+<html lang="en">
+
 <?php
   $background_color = array("red","white","blue");
   $random_color = $background_color[array_rand($background_color, 1)];
 ?>
 
-<!doctype html>
-
-<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>James Dang</title>
