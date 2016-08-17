@@ -1,4 +1,9 @@
 <!doctype html>
+<?php
+  $background = array('#E0162B','#FFFFFF','#0052A5');
+  $random_color = $background[array_rand($background)];
+?>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href=style.css>
 </head>
 
-<body>
+<body style ="background: <?php echo $background; ?>;">
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -29,9 +34,7 @@
         <br>
         <?php 
           date_default_timezone_set('America/Los_Angeles');
-          $background = array('#E0162B','#FFFFFF','#0052A5');
-          $random_color = $background[array_rand($background)];
-
+          
           print "Hello Web World From Language PHP on ";
           print date("m/d/Y h:i a");
         ?>
