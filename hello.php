@@ -1,5 +1,21 @@
 <!doctype html>
 <html lang="en">
+
+<?php
+  if ($_SERVER['REQUEST_METHOD'] === 'GET')
+    {
+      $first_name = $_GET[firstName];
+      $last_name = $_GET[lastName];
+      $background_color = $_GET[favColor];
+    }
+    elseif ($_SERVER['REQUEST_METHOD'] === 'POST')
+    {
+      $first_name = $_POST[firstName];
+      $last_name = $_POST[lastName];
+      $background_color = $_POST[favColor];
+    }
+?>
+
 <head>
   <meta charset="utf-8">
   <title>James Dang</title>
@@ -21,6 +37,7 @@
       $background_color = $_POST[favColor];
     }
 ?>
+
 <body style ="background: <?php echo $background_color; ?>;">
   <nav>
     <ul>
