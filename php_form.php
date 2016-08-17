@@ -24,8 +24,7 @@
         <li><a href="cgi-bin/session.cgi">CGI Session1</a></li>
     <ul>
   <nav>
-  
-  <h1>Form Collection</h1>
+
 
   <form action="echo" method="get">
 
@@ -33,6 +32,8 @@
    <input type="text" name="firstName" id="firstName">
   </label>
 
+  <br>
+  
   <label for="formAction">Form Action:</label>
    <select id="formAction" onchange="this.form.method = this.options[selectedIndex].value;">
     <option>GET</option>
