@@ -26,10 +26,16 @@
   <nav>
   <section>
         <br>
-        
+
+        <form action="" method="post">
+
         <label>Please enter your name:
           <input type="text" name="user_name" id="user_name">
         </label>
+
+        <input type="submit" value="Submit">
+        </form>
+
         <?php 
           session_start();
 
