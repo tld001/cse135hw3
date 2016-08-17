@@ -14,6 +14,8 @@
       $last_name = $_POST[lastName];
       $background_color = $_POST[favColor];
     }
+
+    echo "$background_color";
 ?>
 
 <head>
@@ -23,20 +25,6 @@
   <link rel="stylesheet" type="text/css" href=style.css>
 </head>
 
-<?php
-  if ($_SERVER['REQUEST_METHOD'] === 'GET')
-    {
-      $first_name = $_GET[firstName];
-      $last_name = $_GET[lastName];
-      $background_color = $_GET[favColor];
-    }
-    elseif ($_SERVER['REQUEST_METHOD'] === 'POST')
-    {
-      $first_name = $_POST[firstName];
-      $last_name = $_POST[lastName];
-      $background_color = $_POST[favColor];
-    }
-?>
 
 <body style ="background: <?php echo $background_color; ?>;">
   <nav>
