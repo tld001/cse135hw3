@@ -29,7 +29,7 @@
         <li><a href="cgi-bin/hello.cgi">CGI Hello</a></li>
         <li><a href="cgi-bin/environment.cgi">CGI Environment</a></li>
         <li><a href="cgi-bin/form.cgi">CGI Form</a></li>
-        <li><a href="cgi-bin/session.cgi">CGI Session1</a></li>
+        <li><a href="cgi-bin/session.cgi">CGI Session</a></li>
     <ul>
   <nav>
   <section>
