@@ -43,9 +43,9 @@
 
           $_SESSION['user_name']=$_POST['user_name'];
 
-          
+          /*
           header("Location: sessionpage1.php");
-        
+          */
           
         ?>
         <br>
