@@ -1,6 +1,7 @@
 <?php
   $background_color = array('red','white','blue');
   $random_color = $background_color[array_rand($background_color)];
+  echo $background_color;
 ?>
 
 <!doctype html>
