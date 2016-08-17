@@ -1,7 +1,7 @@
 <!doctype html>
 <?php
-  $background = array('#E0162B','#FFFFFF','#0052A5');
-  $random_color = $background[array_rand($background)];
+  $background_color = array('#E0162B','#FFFFFF','#0052A5');
+  $random_color = $background_color[array_rand($background_color)];
 ?>
 
 <html lang="en">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href=style.css>
 </head>
 
-<body style ="background: <?php echo $background; ?>;">
+<body style ="background: <?php echo $background_color; ?>;">
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
