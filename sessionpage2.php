@@ -27,6 +27,7 @@
   <nav>
 
   <?php 
+    session_start();
     if ($_POST[user_name] === NULL)
     {
       print "Howdy stranger...tell me your name on page1!";
