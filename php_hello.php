@@ -1,8 +1,10 @@
-<!doctype html>
 <?php
   $background_color = array('#E0162B','#FFFFFF','#0052A5');
   $random_color = $background_color[array_rand($background_color)];
+  print "HELLO";
 ?>
+
+<!doctype html>
 
 <html lang="en">
 <head>
