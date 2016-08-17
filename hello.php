@@ -27,9 +27,18 @@
 
   <?php
     date_default_timezone_set('America/Los_Angeles');
-    $first_name = $_GET[firstName];
-    $last_name = $_GET[lastName];
-    
+    if ($_SERVER['REQUEST_METHOD'] === 'GET')
+    {
+      $first_name = $_GET[firstName];
+      $last_name = $_GET[lastName];
+      $color = $_GET[favColor];
+    }
+    elseif ($_SERVER['REQUEST_METHOD'] === 'POST')
+    {
+      $first_name = $_POST[firstName];
+      $last_name = $_POST[lastName];
+      $color = $_POST[favColor];
+    }
 
     echo "Hello $first_name $last_name from a Web app writen in PHP on ";
     echo date("m/d/Y h:i a");
