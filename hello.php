@@ -43,7 +43,7 @@
     }
 
     echo $_SERVER['REQUEST_METHOD'];
-    echo $method;
+    echo "Method is $method \n";
 
     echo "Hello $first_name $last_name from a Web app writen in PHP on ";
     echo date("m/d/Y h:i a");
