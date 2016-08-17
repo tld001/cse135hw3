@@ -35,7 +35,7 @@
         <?php 
           date_default_timezone_set('America/Los_Angeles');
           
-          print "Hello Web World From Language PHP on ";
+          print "Hello Web World From PHP on ";
           print date("m/d/Y h:i a");
         ?>
         <br>
