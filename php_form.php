@@ -41,10 +41,10 @@
   <br>
 
   <label for="favColor">Favorite Color: </label>
-   <select id="favColor" onchange="this.form.method = this.options[selectedIndex].value;">
-    <option>Red</option>
-    <option>White</option>
-    <option>Blue</option>
+   <select name="favColor" id="favColor">
+    <option value="red">Red</option>
+    <option value="white">White</option>
+    <option value="blue">Blue</option>
    </select>
   
   <br>
