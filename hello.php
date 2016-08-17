@@ -12,16 +12,16 @@
     {
       $first_name = $_GET[firstName];
       $last_name = $_GET[lastName];
-      $color = $_GET[favColor];
+      $background_color = $_GET[favColor];
     }
     elseif ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
       $first_name = $_POST[firstName];
       $last_name = $_POST[lastName];
-      $color = $_POST[favColor];
+      $background_color = $_POST[favColor];
     }
 ?>
-<body style ="background: <?php echo $color; ?>;">
+<body style ="background: <?php echo $background_color; ?>;">
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
