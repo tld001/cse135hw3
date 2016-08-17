@@ -1,7 +1,6 @@
 <?php
   $background_color = array('#E0162B','#FFFFFF','#0052A5');
   $random_color = $background_color[array_rand($background_color)];
-  print "HELLO";
 ?>
 
 <!doctype html>
@@ -11,10 +10,9 @@
   <meta charset="utf-8">
   <title>James Dang</title>
   <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css" >
-  <link rel="stylesheet" type="text/css" href=style.css>
 </head>
 
-<body style ="background: <?php echo $background_color; ?>;">
+<body style ="background: <?php echo $background_color; ?>;" >
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
