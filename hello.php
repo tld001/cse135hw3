@@ -15,11 +15,12 @@
       $background_color = $_POST[favColor];
   }
   else{
-  
+
   }
 
   print $background_color;
 ?>
+
 
 <head>
   <meta charset="utf-8">
