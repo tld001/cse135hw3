@@ -27,7 +27,7 @@
   <nav>
 
   <?php 
-    if (is_null($_POST[user_name]))
+    if ($_POST[user_name] === NULL)
     {
       print "Howdy stranger...tell me your name on page1!";
     }
