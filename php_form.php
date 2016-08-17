@@ -33,13 +33,24 @@
   </label>
 
   <br>
+
+  <label>Last Name:
+   <input type="text" name="lastName" id="lastName">
+  </label>
+
+  <label for="favColor">Favorite Color: </label>
+   <select id="favColor" onchange="this.form.method = this.options[selectedIndex].value;">
+    <option>Red</option>
+    <option>White</option>
+    <option>Blue</option>
+   </select>
   
-  <label for="formAction">Form Action:</label>
-   <select id="formAction" onchange="this.form.method = this.options[selectedIndex].value;">
+
+  <label for="sendMethod">Send Method: </label>
+   <select id="sendMethod" onchange="this.form.method = this.options[selectedIndex].value;">
     <option>GET</option>
     <option>POST</option>
    </select>
-
 
 <input type="submit" value="Submit">
 
