@@ -29,6 +29,7 @@
         <br>
         <?php 
           date_default_timezone_set('America/Los_Angeles');
+          phpinfo(16);
           
         ?>
         <br>
