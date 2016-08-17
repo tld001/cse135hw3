@@ -14,7 +14,9 @@
       $last_name = $_POST[lastName];
       $background_color = $_POST[favColor];
   }
-  endif;
+  else{
+  
+  }
 
   print $background_color;
 ?>
