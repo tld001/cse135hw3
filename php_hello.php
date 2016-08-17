@@ -10,9 +10,10 @@
   <meta charset="utf-8">
   <title>James Dang</title>
   <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css" >
+  <link rel="stylesheet" type="text/css" href=style.css>
 </head>
 
-<body style ="background: <?php echo $background_color; ?>;" >
+<body style ="background: red" >
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
