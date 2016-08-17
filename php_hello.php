@@ -4,12 +4,16 @@
   <meta charset="utf-8">
   <title>James Dang</title>
   <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css" >
-  <link rel="stylesheet" type="text/css" href=style.css>
+  <style type="text/css">
+      #program
+      {
+        margin: auto
+      }
+  </style>
 </head>
 
-<body onload = "return random_color()">
-  <div id = "program">
-  </div>
+<body onload="return random_color()">
+  <div id="program"> </div>
   <script type = "text/javascript">
       function random_color()
       {
