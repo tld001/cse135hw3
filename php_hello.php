@@ -20,7 +20,7 @@
           var color = '#';
           var hex_code = ['E0162B','FFFFFF','0052A5'];
           color += hex_code[Math.floor(Math.random() * hex_code.length)];
-          document.getElementById('program').style.background = color;
+          document.getElementById("program").style.backgroundColor = color;
       }
   <nav>
     <ul>
