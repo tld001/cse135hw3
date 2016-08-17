@@ -26,7 +26,9 @@
   <nav>
 
   <?php
-    print "Hello";
+    $first_name = $_GET[firstName];
+    $last_name = $_GET[lastName];
+    echo "Hello" $first_name $last_name;
   ?>
 
 </body>
