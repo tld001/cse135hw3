@@ -7,17 +7,12 @@
       $first_name = $_GET[firstName];
       $last_name = $_GET[lastName];
       $background_color = $_GET[favColor];
-      print_r($_GET);
   }
   elseif ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
       $first_name = $_POST[firstName];
       $last_name = $_POST[lastName];
       $background_color = $_POST[favColor];
-      print_r($_POST);
-  }
-  else{
-
   }
 
 ?>
@@ -31,7 +26,7 @@
 </head>
 
 
-<body style ="background: <?php echo $random_color; ?>;" >
+<body style ="background: <?php echo $background_color; ?>;" >
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
