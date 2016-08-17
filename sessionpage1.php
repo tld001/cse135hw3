@@ -44,7 +44,7 @@
           $_SESSION['user_name']=$_POST['user_name'];
 
           
-          header( "Location: sessionpage2.php");
+          header("Location: sessionpage1.php");
         
           
         ?>
