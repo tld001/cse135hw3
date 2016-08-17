@@ -7,7 +7,21 @@
   <link rel="stylesheet" type="text/css" href=style.css>
 </head>
 
-<body>
+<?php
+  if ($_SERVER['REQUEST_METHOD'] === 'GET')
+    {
+      $first_name = $_GET[firstName];
+      $last_name = $_GET[lastName];
+      $color = $_GET[favColor];
+    }
+    elseif ($_SERVER['REQUEST_METHOD'] === 'POST')
+    {
+      $first_name = $_POST[firstName];
+      $last_name = $_POST[lastName];
+      $color = $_POST[favColor];
+    }
+?>
+<body style ="background: <?php echo $color; ?>;">
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -27,23 +41,6 @@
 
   <?php
     date_default_timezone_set('America/Los_Angeles');
-    if ($_SERVER['REQUEST_METHOD'] === 'GET')
-    {
-      $first_name = $_GET[firstName];
-      $last_name = $_GET[lastName];
-      $color = $_GET[favColor];
-      $method = $_GET[sendMethod];
-    }
-    elseif ($_SERVER['REQUEST_METHOD'] === 'POST')
-    {
-      $first_name = $_POST[firstName];
-      $last_name = $_POST[lastName];
-      $color = $_POST[favColor];
-      $method = $_POST[sendMethod];
-    }
-
-    echo $_SERVER['REQUEST_METHOD'];
-    echo "Method is $method \n";
 
     echo "Hello $first_name $last_name from a Web app writen in PHP on ";
     echo date("m/d/Y h:i a");
