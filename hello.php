@@ -32,13 +32,18 @@
       $first_name = $_GET[firstName];
       $last_name = $_GET[lastName];
       $color = $_GET[favColor];
+      $method = $_GET[sendMethod];
     }
     elseif ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
       $first_name = $_POST[firstName];
       $last_name = $_POST[lastName];
       $color = $_POST[favColor];
+      $method = $_POST[sendMethod];
     }
+
+    echo $_SERVER['REQUEST_METHOD'];
+    echo $method;
 
     echo "Hello $first_name $last_name from a Web app writen in PHP on ";
     echo date("m/d/Y h:i a");
