@@ -25,7 +25,9 @@
     <ul>
   <nav>
 
-  Hello <?php echo $_GET["firstName"] " " $GET["lastName"]; ?> <br>
+  <?php
+    print "Hello";
+  ?>
 
 </body>
 </html>
