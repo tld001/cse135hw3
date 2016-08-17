@@ -24,13 +24,24 @@
         <li><a href="cgi-bin/session.cgi">CGI Session1</a></li>
     <ul>
   <nav>
-  <section>
-        <br>
-        <?php 
-          date_default_timezone_set('America/Los_Angeles');
-          
-        ?>
-        <br>
-  <section>
+  
+  <h1>Form Collection</h1>
+
+  <form action="echo" method="get">
+
+  <label>First Name:
+   <input type="text" name="firstName" id="firstName">
+  </label>
+
+  <label for="formAction">Form Action:</label>
+   <select id="formAction" onchange="this.form.method = this.options[selectedIndex].value;">
+    <option>GET</option>
+    <option>POST</option>
+   </select>
+
+
+<input type="submit" value="Submit">
+
+</form>
 </body>
 </html>
