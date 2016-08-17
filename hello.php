@@ -32,7 +32,7 @@
     
 
     echo "Hello $first_name $last_name from a Web app writen in PHP on ";
-    echo date("m/d/Y h:i a";)
+    echo date("m/d/Y h:i a");
   ?>
 
 </body>
