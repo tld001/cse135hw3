@@ -15,7 +15,7 @@
       $background_color = $_POST[favColor];
     }
 
-    echo "$background_color";
+    print $background_color;
 ?>
 
 <head>
@@ -26,7 +26,7 @@
 </head>
 
 
-<body style ="background: <?php echo $background_color; ?>;">
+<body style ="background: <?php echo $random_color; ?>;" >
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -44,12 +44,14 @@
     <ul>
   <nav>
 
+  <section>
   <?php
     date_default_timezone_set('America/Los_Angeles');
 
     echo "Hello $first_name $last_name from a Web app writen in PHP on ";
     echo date("m/d/Y h:i a");
   ?>
+  <section>
 
 </body>
 </html>
