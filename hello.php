@@ -25,40 +25,7 @@
     <ul>
   <nav>
 
-
-  <form action="hello.php" method="get">
-
-  <label>First Name:
-   <input type="text" name="firstName" id="firstName">
-  </label>
-
-  <br>
-
-  <label>Last Name:
-   <input type="text" name="lastName" id="lastName">
-  </label>
-
-  <br>
-
-  <label for="favColor">Favorite Color: </label>
-   <select id="favColor" onchange="this.form.method = this.options[selectedIndex].value;">
-    <option>Red</option>
-    <option>White</option>
-    <option>Blue</option>
-   </select>
-  
-  <br>
-
-  <label for="sendMethod">Send Method: </label>
-   <select id="sendMethod" onchange="this.form.method = this.options[selectedIndex].value;">
-    <option>GET</option>
-    <option>POST</option>
-   </select>
-
-<input type="submit" value="Submit">
-
-</form>
-
+  Hello <?php echo $_GET["firstName"] " " $GET["lastName"]; ?> <br>
 
 </body>
 </html>
