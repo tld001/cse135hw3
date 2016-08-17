@@ -7,20 +7,18 @@
       $first_name = $_GET[firstName];
       $last_name = $_GET[lastName];
       $background_color = $_GET[favColor];
-      print "GET";
   }
   elseif ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
       $first_name = $_POST[firstName];
       $last_name = $_POST[lastName];
       $background_color = $_POST[favColor];
-      print "POST";
   }
   else{
 
   }
 
-  print $background_color;
+  print "$background_color";
 ?>
 
 
