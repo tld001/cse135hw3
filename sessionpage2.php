@@ -26,5 +26,17 @@
     <ul>
   <nav>
 
+  <?php 
+    if (is_null($_POST[user_name]))
+    {
+      print "Howdy stranger...tell me your name on page1!";
+    }
+    else
+    {
+      print "Hi $_POST[user_name] nice to meet you!";
+    }
+          
+  ?>
+
 </body>
 </html>
