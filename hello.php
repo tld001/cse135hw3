@@ -26,15 +26,13 @@
   <nav>
 
   <?php
+    date_default_timezone_set('America/Los_Angeles');
     $first_name = $_GET[firstName];
     $last_name = $_GET[lastName];
     
-    /*
-    print $first_name;
-    print $last_name;
-    */
 
-    echo "Hello $first_name $last_name";
+    echo "Hello $first_name $last_name from a Web app writen in PHP on ";
+    echo date("m/d/Y h:i a";)
   ?>
 
 </body>
