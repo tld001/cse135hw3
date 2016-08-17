@@ -4,24 +4,10 @@
   <meta charset="utf-8">
   <title>James Dang</title>
   <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css" >
-  <style type="text/css">
-      #program
-      {
-        margin: auto
-      }
-  </style>
+  <link rel="stylesheet" type="text/css" href=style.css>
 </head>
 
-<body onload="return random_color()">
-  <div id="program"> </div>
-  <script type = "text/javascript">
-      function random_color()
-      {
-          var color = '#';
-          var hex_code = ['E0162B','FFFFFF','0052A5'];
-          color += hex_code[Math.floor(Math.random() * hex_code.length)];
-          document.getElementById("program").style.backgroundColor = color;
-      }
+<body>
   <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -43,6 +29,9 @@
         <br>
         <?php 
           date_default_timezone_set('America/Los_Angeles');
+          $background = array('#E0162B','#FFFFFF','#0052A5');
+          $random_color = $background[array_rand($background)];
+
           print "Hello Web World From Language PHP on ";
           print date("m/d/Y h:i a");
         ?>
