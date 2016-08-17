@@ -29,7 +29,10 @@
         <br>
         <?php 
           date_default_timezone_set('America/Los_Angeles');
-          phpinfo(16);
+          while(list($variable,$value) = each($_SERVER))
+          {
+            echo "$variable : $value <br>";
+          }
           
         ?>
         <br>
