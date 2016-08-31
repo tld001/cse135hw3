@@ -1,7 +1,7 @@
 <?php
 
-    define('DB_USER','cse135demo');
-    define('DB_PASSWORD','notsecret');
+    define('DB_USER','root');
+    define('DB_PASSWORD','james');
     define('DB_HOST','127.0.0.1');
     define('DB_NAME','userDB');
 
