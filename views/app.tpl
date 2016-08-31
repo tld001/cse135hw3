@@ -33,7 +33,7 @@
 	  		   
      for ($i = 0; $i < count($movies); $i++) {
 
-     	$number = money_format('%i', $movies[$i]['boxoffice']);
+     	$number = money_format('$%i', $movies[$i]['boxoffice']);
 	   
 	    print "<tr>";
 	    print "<td>". $movies[$i]['title']   . "</td>" ;
