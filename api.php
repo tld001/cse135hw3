@@ -33,13 +33,13 @@ for ($i=0;$i<count($columns);$i++) {
 
 switch ($method) {
   case 'GET':
-    $sql = "select * from users".($key?" where user_id=$key":''); break;
+    $sql = "select * from movies".($key?" where movie_id=$key":''); break;
   case 'PUT':
-    $sql = "update users set $set where user_id=$key"; break;
+    $sql = "update movies set $set where movie_id=$key"; break;
   case 'POST':
-    $sql = "insert into users set $set"; break;
+    $sql = "insert into movies set $set"; break;
   case 'DELETE':
-    $sql = "delete from users where user_id=$key"; break;
+    $sql = "delete from movies where movie_id=$key"; break;
 }
 
 
