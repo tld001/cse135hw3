@@ -45,7 +45,7 @@
        $temp = $_POST['movie_id'];
   	   $sql = "DELETE FROM movies WHERE movie_id = '$temp'";
 
-       $result = mysqli_query($conn, "DELETE FROM movies WHERE movie_id = '$temp'");
+       $result = mysqli_query($conn, "DELETE FROM movies WHERE movie_id = $temp");
        if($result == false)
        		print("hi");
 	
