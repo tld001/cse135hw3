@@ -38,6 +38,7 @@
 	{
     	$order = $_GET['order_by'];
 	}
+?>
 
 <?php
    if (count($movies) == 0) {
