@@ -32,12 +32,14 @@
   } else {
 	  		   
      for ($i = 0; $i < count($movies); $i++) {
+
+     	$number = money_format('%i', $movies[$i]['boxoffice']);
 	   
 	    print "<tr>";
 	    print "<td>". $movies[$i]['title']   . "</td>" ;
 	    print "<td>". $movies[$i]['studio']    . "</td>" ;
 	    print "<td>". $movies[$i]['year']        . "</td>" ;
-	    print "<td>". $movies[$i]['boxoffice']     . "</td>" ;
+	    print "<td>". $number   . "</td>" ;
 	    print "<td>". $movies[$i]['poster']       . "</td>" ;
 	    
 	    print "<td><div class='row'>";
