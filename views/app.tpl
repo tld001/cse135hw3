@@ -91,12 +91,12 @@
 
 	<div class="form-group">
 		<label for="year">Year</label>
-		<input type="text" name="year" id="year" value=""  class="form-control">
+		<input type="number" name="year" id="year" value=""  class="form-control">
 	</div>
 
 	<div class="form-group">
 		<label for="boxoffice">BoxOffice</label>
-		<input type="text" name="boxoffice" id="boxoffice" value=""  class="form-control">
+		<input type="number" name="boxoffice" id="boxoffice" value=""  class="form-control">
 	</div>
 
 	<div class="form-group">
