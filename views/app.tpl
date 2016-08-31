@@ -22,7 +22,23 @@
 <h1>Box Office Tracker</h1>
 	
 <table class='table'>
-<tr><th>Title</th><th>Studio</th><th>Year</th><th>BoxOffice</th><th>Poster</th><th></th></tr>
+<tr>
+<th> <a href="?orderBy=title">Title</a> </th>
+<th> <a href="?orderBy=studio">Studio</a> </th>
+<th> <a href="?orderBy=year">Year</a> </th>
+<th> <a href="?orderBy=boxoffice">BoxOffice</a> </th>
+<th>Poster</th>
+<th></th>
+</tr>
+<?php
+	$order_by = array('title','studio', 'year', 'boxoffice');
+	$order = 'title';
+
+	if (isset($_GET['order_by']) && in_array($_GET['order_by'], $order_by)) 
+	{
+    	$order = $_GET['order_by'];
+	}
+
 <?php
    if (count($movies) == 0) {
 ?>
