@@ -29,7 +29,11 @@
 	   $movie_id = $_REQUEST['movie_id'];
 	   $poster = $_REQUEST['poster'];
 	
-	   $sql = "UPDATE movies SET title='" .$title."' ,studio='".$studio."' ,year='.$year.' ,boxoffice='.$boxoffice.', poster='".$poster."' WHERE movie_id='".$movie_id."'";
+	   /*
+	   $sql = "UPDATE movies SET title='" .$title."' ,studio='".$studio."' ,year='".$year."' ,boxoffice='".$boxoffice."', poster='".$poster."' WHERE movie_id='".$movie_id."'";
+	   */
+	   $sql = "UPDATE movies SET title='$title' ,studio='$studio' ,year=$year ,boxoffice=$boxoffice, poster=$poster WHERE movie_id=$movie_id.";
+
        $result = mysqli_query($conn, $sql);
 		
 	}  else if ($action == "Delete") {
