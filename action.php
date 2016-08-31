@@ -16,7 +16,7 @@
 	   // SHOULD HAVE VALIDATION HERE!?
 		
 	
-	   $sql = "INSERT INTO movies (title,studio,year,boxoffice) VALUES ('$title' , '$studio' , '$year' , '$boxoffice', '$poster')";
+	   $sql = "INSERT INTO movies (title,studio,year,boxoffice,poster) VALUES ('$title' , '$studio' , '$year' , '$boxoffice', '$poster')";
 	   $result = mysqli_query($conn, $sql);
 		
 		
