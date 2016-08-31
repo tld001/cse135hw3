@@ -42,7 +42,7 @@
        $sql = "DELETE FROM movies WHERE movie_id='".$_POST['movie_id']."'"; 
        */
        $movie_id = $_POST['movie_id'];
-  	   $sql = "DELETE FROM movies WHERE movie_id=$movie_id";
+  	   $sql = "DELETE FROM movies WHERE movie_id='$movie_id'";
 
        $result = mysqli_query($conn, $sql);
 
