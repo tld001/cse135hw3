@@ -37,7 +37,7 @@
 	    print "<td>". $movies[$i]['title']   . "</td>" ;
 	    print "<td>". $movies[$i]['studio']    . "</td>" ;
 	    print "<td>". $movies[$i]['year']        . "</td>" ;
-	    print "<td>". \$ $movies[$i]['boxoffice']     . "</td>" ;
+	    print "<td>". $movies[$i]['boxoffice']     . "</td>" ;
 	    print "<td>". $movies[$i]['poster']       . "</td>" ;
 	    
 	    print "<td><div class='row'>";
