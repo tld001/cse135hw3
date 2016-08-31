@@ -1,5 +1,5 @@
 <?php
-	
+	echo "hi";
 	// CONNECT TO DB
     require_once 'config.inc';
        
