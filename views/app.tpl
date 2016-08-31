@@ -2,42 +2,51 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Super Basic CRUD!</title>
+<title>Box Office Tracker - James Dang</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<link rel="stylesheet" type="text/css" href=style.css>
 </head>
 <body>
 
+<nav>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="README.html">README</a></li>
+    <ul>
+<nav>
+
 <div class="container">
 	
-<h1>Super Basic CRUD!</h1>
+<h1>Box Office Tracker</h1>
 	
 <table class='table'>
-<tr><th>First Name</th><th>Last Name</th><th>Login</th><th>Password</th><th></th></tr>
+<tr><th>Title</th><th>Studio</th><th>Year</th><th>BoxOffice</th><th>Poster</th><th></th></tr>
 <?php
-   if (count($users) == 0) {
+   if (count($movies) == 0) {
 ?>
-  <tr><td colspan='5'>No Users</td></tr>
+  <tr><td colspan='5'>No Movies</td></tr>
 
 <?php
   } else {
 	  		   
-     for ($i = 0; $i < count($users); $i++) {
+     for ($i = 0; $i < count($movies); $i++) {
 	   
 	    print "<tr>";
-	    print "<td>". $users[$i]['first_name']   . "</td>" ;
-	    print "<td>". $users[$i]['last_name']    . "</td>" ;
-	    print "<td>". $users[$i]['login']        . "</td>" ;
-	    print "<td>". $users[$i]['password']     . "</td>" ;
+	    print "<td>". $movies[$i]['title']   . "</td>" ;
+	    print "<td>". $movies[$i]['studio']    . "</td>" ;
+	    print "<td>". $movies[$i]['year']        . "</td>" ;
+	    print "<td>". $movies[$i]['boxoffice']     . "</td>" ;
+	    print "<td>". $movies[$i]['poster']       . "</td>" ;
 	    
 	    print "<td><div class='row'>";
 	    	    
-	    print "<div class='col-sm-6'><button type='button' class='btn btn-default' onclick='SBC.editRecord(".json_encode($users[$i]).")'>
+	    print "<div class='col-sm-6'><button type='button' class='btn btn-default' onclick='SBC.editRecord(".json_encode($movies[$i]).")'>
   <span class='glyphicon glyphicon-pencil'></span></button></div>";
 
 	    
-	    print "<div class='col-sm-6'><button type='button' class='btn btn-default' onclick='SBC.confirmDelete(".$users[$i]['user_id'].");'><span class='glyphicon glyphicon-trash'></span></button></div>";
+	    print "<div class='col-sm-6'><button type='button' class='btn btn-default' onclick='SBC.confirmDelete(".$movies[$i]['movie_id'].");'><span class='glyphicon glyphicon-trash'></span></button></div>";
   
   	    print "</div></td></tr>\n";
 	    
@@ -55,7 +64,7 @@
 </button>
 
 
-<!--  Partials are below --->
+<!--  Partials are below -->
 
 <!-- Add Modal -->
 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -69,26 +78,31 @@
 
 	 <form action="action.php" method="POST" class="form">
 	 <div class="form-group">
-	 	<label for="first_name">First Name</label>
-	 	<input type="text" name="first_name" id="first_name" value=""  class="form-control">
+	 	<label for="title">Title</label>
+	 	<input type="text" name="title" id="title" value=""  class="form-control">
 	 </div>
 
 	 <div class="form-group">
-	 	<label for="last_name">Last Name</label>
-	 	<input type="text" name="last_name" id="last_name" value=""  class="form-control">
+	 	<label for="studio">Studio</label>
+	 	<input type="text" name="studio" id="studio" value=""  class="form-control">
 	 </div>
 
 	<div class="form-group">
-		<label for="login">Login</label>
-		<input type="text" name="login" id="login" value=""  class="form-control">
+		<label for="year">Year</label>
+		<input type="text" name="year" id="year" value=""  class="form-control">
 	</div>
 
 	<div class="form-group">
-		<label>Password</label>
-		<input type="password" name="password" id="password" value=""  class="form-control">
+		<label for="boxoffice">BoxOffice</label>
+		<input type="text" name="boxoffice" id="boxoffice" value=""  class="form-control">
+	</div>
+
+	<div class="form-group">
+		<label for="poster">Poster</label>
+		<input type="text" name="poster" id="poster" value=""  class="form-control">
 	</div>
 	
-	<input type="hidden" name="user_id" id="user_id" value="">
+	<input type="hidden" name="movie_id" id="movie_id" value="">
 	
     </div>
       <div class="modal-footer">
@@ -116,7 +130,7 @@
       <div class="modal-footer">
 
       <form action="action.php" method="POST">
-	  	<input type="hidden" name="user_id" id="deleteConfirm_user_id" value="">
+	  	<input type="hidden" name="movie_id" id="deleteConfirm_movie_id" value="">
 	  	
 	  	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <button type="submit" class="btn btn-primary" name="action" value="Delete">Delete</button>
@@ -148,7 +162,7 @@
 	var SBC = {};
 	
 	SBC.confirmDelete = function confirmDelete(id) {
-	  $("#deleteConfirm_user_id").attr('value',id);
+	  $("#deleteConfirm_movie_id").attr('value',id);
 	  $('#deleteModal').modal('show');
 	}
 	
@@ -167,11 +181,12 @@
 	    
 	    $("#myModalLabel").html("Edit Record");
 	  
-	    $("#first_name").attr('value',record.first_name);
-	    $("#last_name").attr('value',record.last_name);
-	    $("#login").attr('value',record.login);
-	    $("#password").attr('value',record.password);
-	    $("#user_id").attr('value',record.user_id);
+	    $("#title").attr('value',record.title);
+	    $("#studio").attr('value',record.studio);
+	    $("#year").attr('value',record.year);
+	    $("#boxoffice").attr('value',record.boxoffice);
+	    $("#poster").attr('value',record.poster);
+	    $("#movie_id").attr('value',record.movie_id);
 	  
 	    $("#actionBtn").attr('value','Update');
 	    $("#actionBtn").html('Update');
