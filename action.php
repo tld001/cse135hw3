@@ -32,9 +32,9 @@
 	   /*
 	   $sql = "UPDATE movies SET title='" .$title."' ,studio='".$studio."' ,year='".$year."' ,boxoffice='".$boxoffice."', poster='".$poster."' WHERE movie_id='".$movie_id."'";
 	   */
-	   $sql = "UPDATE movies SET title='$title' ,studio='$studio' ,year=$year. ,boxoffice=$boxoffice, poster='$poster' WHERE movie_id=$movie_id";
+	   $sql = "UPDATE movies SET title='$title' ,studio='$studio' ,year=$year ,boxoffice=$boxoffice, poster='$poster' WHERE movie_id=$movie_id";
 
-       $result = mysqli_query($conn, $sql);
+       $result = mysqli_query($conn, "UPDATE movies SET title='$title' ,studio='$studio' ,year='$year' ,boxoffice='$boxoffice', poster='$poster' WHERE movie_id='$movie_id'");
 		
 	}  else if ($action == "Delete") {
 
