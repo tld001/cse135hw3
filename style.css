@@ -6,17 +6,3 @@ li{
    display: inline;
 }
 
-article {
-
-  border-style: hidden;
-
-  border-width: medium;
-
-  background-color: lightblue;
- 
-  width: 640px;
-}
-
-body {
-  background-color: white;
-}
