@@ -1,5 +1,5 @@
 <?php
-	echo "hi";
+	
 	// CONNECT TO DB
     require_once 'config.inc';
        
@@ -10,6 +10,6 @@
     $users = $result->fetch_all(MYSQLI_ASSOC);
    
 	// RENDER THE VIEW
-    include('./views/list.tpl');
+    include('./views/app.tpl');
 ?>
 
