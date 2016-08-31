@@ -3,6 +3,6 @@ section {
 }
 
 li{
-   display: inline;
+   display: inline-block;
 }
 
