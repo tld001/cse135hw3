@@ -43,12 +43,12 @@
        */
 
        $temp = $_POST['movie_id'];
-       print $temp;
   	   $sql = "DELETE FROM movies WHERE movie_id='".$temp."' ";
 
        $result = mysqli_query($conn, $sql);
-
-		
+       if($result == false)
+       		print("hi");
+	
 	}
 
 	header('Location: index.php');
