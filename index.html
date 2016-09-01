@@ -120,7 +120,7 @@
 		
 	SBC.loadData = function () {
 		
-		$("#listGrid").html("");
+		$("#listGrid").html("<tr><th>Title</th><th>Studio</th><th>Year</th><th>BoxOffice</th><th>Poster</th><th></th></tr>");
 		
 		$.getJSON("./api.php", function(data) {
 			
@@ -129,7 +129,7 @@
 			    } else {
 				  $.each(data, function (index,value) {
 					  
-					  var str = "<tr><th>Title</th><th>Studio</th><th>Year</th><th>BoxOffice</th><th>Poster</th><th></th></tr>";
+					  var str = "";
 					  str += "<tr><td>"+value.title+"</td>";
 					  str += "<td>"+value.studio+"</td>";
 					  str += "<td>"+value.year+"</td>";
