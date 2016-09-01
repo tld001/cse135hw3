@@ -15,7 +15,7 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="README.html">README</a></li>
     <ul>
-<nav>
+</nav>
 
 <div class="container">
 	
