@@ -4,11 +4,11 @@
     require_once 'config.inc';
        
     // FORM AND EXECUTE SOME QUERY
-    $sql = "SELECT user_id,login,first_name,last_name, password FROM users ORDER BY login";
+    $sql = "SELECT title,studio,year,boxoffice, poster FROM movies ORDER BY boxoffice DESC";
     $result = mysqli_query($conn, $sql);
     
-    $users = $result->fetch_all(MYSQLI_ASSOC);
-   
+    $movies = $result->fetch_all(MYSQLI_ASSOC);
+   	
 	// RENDER THE VIEW
     include('./views/app.tpl');
 ?>

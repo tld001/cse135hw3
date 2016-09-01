@@ -7,36 +7,38 @@
 	
 	if ($action == 'Add') {
 		
-       $first_name = $_REQUEST['first_name'];
-	   $last_name = $_REQUEST['last_name'];
-	   $login = $_REQUEST['login'];
-	   $password = $_REQUEST['password'];
+       $title = $_REQUEST['title'];
+	   $studio = $_REQUEST['studio'];
+	   $year = $_REQUEST['year'];
+	   $boxoffice = $_REQUEST['boxoffice'];
+	   $poster = $_REQUEST['poster'];
 	   
 	   // SHOULD HAVE VALIDATION HERE!?
 		
 	
-	   $sql = "INSERT INTO users (first_name,last_name,login,password) VALUES ('$first_name' , '$last_name' , '$login' , '$password')";
+	   $sql = "INSERT INTO movies (title,studio,year,boxoffice,poster) VALUES ('$title' , '$studio' , '$year' , '$boxoffice', '$poster')";
 	   $result = mysqli_query($conn, $sql);
 		
 		
 	} else if ($action == "Update") {
 		
-	   $first_name = $_REQUEST['first_name'];
-	   $last_name = $_REQUEST['last_name'];
-	   $login = $_REQUEST['login'];
-	   $password = $_REQUEST['password'];
-	   $user_id = $_REQUEST['user_id'];
+	   $title = $_REQUEST['title'];
+	   $studio = $_REQUEST['studio'];
+	   $year = $_REQUEST['year'];
+	   $boxoffice = $_REQUEST['boxoffice'];
+	   $poster = $_REQUEST['poster'];
+	   $movie_id = $_REQUEST['movie_id'];
 	
-	   $sql = "UPDATE users SET first_name='" .$first_name."' ,last_name='".$last_name."' ,login='".$login."' ,password='".$password."' WHERE user_id='".$user_id."'";
+	   $sql = "UPDATE users SET title='" .$title."' ,studio='".$studio."' ,year='".$year."' ,boxoffice='".$boxoffice."',poster='".$poster."' WHERE movie_id='".$movie_id."'";
+       
        $result = mysqli_query($conn, $sql);
 		
 	}  else if ($action == "Delete") {
-		
-  		
-       $sql = "DELETE FROM users WHERE user_id='".$_POST['user_id']."'"; 
+
+  	   $sql = "DELETE FROM movies WHERE movie_id='".$_POST['movie_id']."'"; 
        $result = mysqli_query($conn, $sql);
 
-		
+	
 	}
 
 	header('Location: index.php');
